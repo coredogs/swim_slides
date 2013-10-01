@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Editors: Show-What-I-Mean (SWIM) vs. WYSIWYG</title>
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+    <!-- KRM customizations. -->
+    <link rel="stylesheet" href="css/custom.css">
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+Users like WYSIWYG
+
+  The promise: what authors see on the editor screen is what readers see in the final display.
+
+But... 
+
+  True WYSIWYG is not feasible anymore.
+  
+  Today's presentational formatting might not work on future devices.
+  
+  Presentational markup might not work for all humans. (Color blind, etc.)
+
+Markup is good!
+
+  Markup gives intent. 
+  
+  Let the device format, for the current user.
+  
+Users and markup?
+
+  (screenshot of markdown editor with headers and images)
+  
+  (Arrow pointing to header tag. User: "I can do that.")
+  
+  (Arrow pointing to image tag with path. User: "WTF!")
+
+Users and markup?
+
+  Combine precision of markup with GUI ease of use.
+  
+Demo
+
+  Do tags and insert images. Show previews.
+  
+CKEditor
+
+
+
+Which markup language?
+
+  Easy for users
+  Language standard for custom tags
+  Stable, maintained s/w
+  Easy to implement custom tags
+
+reStructured text
+
+  From Python programming community.
+    Part of DocUtils package.
+  Many directives.
+  Canonical translator is stable.
+  Extend class to make a custom directive.
+  
+Drupal integration
+
+  Input format
+  CKEditor profile
+  Custom peek plugin (quick overview of rendering)
+
+PHP
+
+  (Code)
+  
+That's all folks!
+    
+    
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+          <h2>Show-What-I-Mean (SWIM)<br>vs<br>WYSIWYG</h2>
+          <h1 class="smackdown">Smackdown</h1>
+					<p>
+						<small>Kieran Mathieson, <a href="http://dolfinity.com">Dolfinity Learning</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Skill Courses in Higher Education</h2>
+					<div class="lefty">
+            <p>Writing, data analysis, programming...</p>
+            <p>Help students get the most bang per buck from skill courses.</p>
+            <p>Research on learning tells us how.</p>
+          </div>
+
+<!--					<aside class="notes">
+
+					</aside>-->
+				</section>
+        
+				<section>
+					<h2>Practices Backed by Research</h2>
+					<div class="lefty">
+            <ul>
+              <li>Outcome-based learning.
+                <p class="subpoint">
+                  Sharp focus on well-defined goals.
+                </p>
+              </li>
+              <li>Deep learning.
+                <p class="subpoint">
+                  Problem solving, not memorization.
+                </p>
+              </li>
+              <li>Frequent formative feedback.
+                <p class="subpoint">
+                  Students do tasks, not quizzes. They get feedback from  
+                  people, not computers. They get hints for improvements, 
+                  not just a grade.
+                </p>
+              </li>
+              <li>One-on-one help from knowledgeable people.
+                <p class="subpoint">
+                  Flipped classes. Teacher as guide, not lecturer.
+                </p>
+              </li>
+              <li>Metacognitive awareness.
+                <p class="subpoint">
+                  Overcome barriers to learning, e.g., "I don't have the math gene."
+                </p>
+              </li>
+              <li>Other things...</li>
+            </ul>
+          </div>
+				</section>
+
+				<section>
+					<h2>But...</h2>
+					<p class="lefty">
+            Professors are chemists, mathematicians, economists... 
+          </p>
+          <p class="lefty subpoint">
+            Not trained in learning research.
+          </p>
+          <p class="lefty subpoint">
+            Fewer than 1 in 10 use learning research in class preparation.
+          </p>
+          <p class="lefty">
+            Hard to change.
+          </p>
+          <p class="lefty subpoint">
+            We would have to change faculty reward systems, hiring practices, 
+            graduate student training, workload allocation, administrative
+            priorities, funding models...
+          </p>
+          <p class="lefty">
+            Fuggedaboutit!
+          </p>
+          <p class="lefty subpoint">
+            This level of organizational change is very, <em>very</em>,
+            <strong><em>very</em></strong> difficult.
+          </p>
+				</section>
+
+				<section>
+					<h2>Solution</h2>
+          <p class="lefty">
+            Rethink how skill courses are designed and run.
+          </p>
+					<p class="lefty">
+            Unbundle professors' jobs.
+          </p>
+          <p class="lefty subpoint">
+            Let professors just be content area experts. That's difficult
+            enough!
+          </p>
+					<p class="lefty">
+            Other people design skill courses. 
+          </p>
+          <p class="lefty subpoint">
+            Course authors are professors with side businesses, practicing 
+            professionals, ...
+          </p>
+          <p class="lefty subpoint">
+            They learn about learning.
+          </p>
+          <p class="lefty subpoint">
+            Use open source Web software to create courses.
+          </p>
+          <p class="lefty subpoint">
+            Charge $ to support their work.
+          </p>
+				</section>
+
+       
+        <section>
+					<h2>The new skill course: Four Roles</h2>
+					<div class="lefty">
+            <p><span class="highlight">Authors</span> create online content, exercises, 
+              grading rubrics, ... </p>
+            <p><span class="highlight">Professors</span> choose courses, and customize them.</p>
+            <p><span class="highlight">Students</span> work through online material.</p>
+            <p class="lefty subpoint">
+              Many hands-on exercises. Write programs, analyze data...
+            </p>
+            <p class="lefty subpoint">
+              Stuck? Get personal help from professors/assistants.
+            </p>
+            <p><span class="highlight">Graders</span> evaluate student work.</p>
+            <p class="lefty subpoint">Give students not just a grade, but
+            a list of improvements.</p>
+            <p class="lefty subpoint">If allowed, students improve their work and 
+            resubmit.</p>
+          </div>
+				</section>
+
+        
+        <section>
+					<h2>Authors</h2>
+					<div class="lefty">
+            <ul>
+              <li>
+                Educational entrepreneurs.
+                <p class="subpoint">Run their own Web sites, or outsource.</p>
+              </li>
+              <li>Experts in writing, programming, statistics...
+                <p class="subpoint">Part-time instructors with Ph.D.s.</p>
+                <p class="subpoint">Professors earning summer money.</p>
+                <p class="subpoint">Professionals working for themselves.</p>
+              </li>
+              <li>Give away or sell their work.
+                <p class="subpoint">Students buy course access, instead of textbooks.</p>
+                <p class="subpoint">Authors keep 75% - 100% of the revenue.</p>
+                <p class="subpoint">Set low prices, and still make money.</p>
+                <p class="subpoint">Can bundle grading services with courses.</p>
+              </li>
+            </ul>
+          </div>
+				</section>        
+
+        
+        <section>
+					<h2>Professors</h2>
+					<div class="lefty">
+            <ul>
+              <li>Do research.</li>
+              <li>Keep up with their fields.</li>
+              <li>Work with students one-on-one, and in small groups. *</li>
+              <li>Encourage students. *</li>
+              <li>Give final grades.</li>
+            </ul>
+            <p class="subpoint" style="text-align: right;">* High touch</p>
+            <ul>
+              <li>Don't lecture.</li>
+              <li>Don't make courses from scratch.</li>
+              <li>Don't need to be experts in both their fields and 
+                  learning research.</li>
+            </ul>
+          </div>
+				</section>        
+        
+
+        <section>
+					<h2>Students</h2>
+					<div class="lefty">
+            <ul>
+              <li>
+                Work online mostly. 
+                <p class="subpoint">Any place, any time.</p>
+              </li>
+              <li>
+                Read content, and do hands-on exercises.
+                <p class="subpoint">Get personal feedback from human graders.</p>
+              </li>
+              <li>
+                Help from professors/tutors.
+                <p class="subpoint">Optional or required meetings.</p>
+                <p class="subpoint">Face-to-face, or online in real time.</p>
+              </li>
+              <li>Encouragement from professors/tutors/graders.
+                <p class="subpoint">
+                  Email: "You didn't do any exercises this week. Need help?"
+                </p>
+              </li>
+            </ul>
+          </div>
+				</section>        
+                
+        
+        <section>
+					<h2>Graders</h2>
+					<div class="lefty">
+            <ul>
+              <li>Give each student personal feedback for every exercise.</li>
+              <li>Use standardized rubrics created by authors.</li>
+              <li>Can be anywhere in the world.</li>
+              <li>Don't need to be experts. Just:
+                <p class="subpoint">Competent (enough).</p>
+                <p class="subpoint">Personable.</p>
+                <p class="subpoint">Good (enough) writers.</p>
+              </li>
+            </ul>
+          </div>
+				</section>
+        
+        
+        <section>
+					<h2>CyberCourse</h2>
+					<div class="lefty">
+            <p>Open source software for creating and running skill courses.</p>
+            <p>Supports learning science principles.</p>
+                <p class="subpoint">Improves student skills.</p>
+            <p>Supports a sustainable business model.</p>
+                <p class="subpoint">Authors get the revenue.</p>
+            <p>Professors don't need to learn about learning research.</p>
+                <p class="subpoint">Authors bake learning research goodness into courses.</p>
+            <p class="highlight">
+              Now for some screen shots...
+            </p>
+          </div>
+				</section>        
+        
+
+        <section>
+					<h2>Feature: Course Design Blueprints</h2>
+          <p class="lefty">
+            CyberCourse blueprints help authors design good courses, before they start
+            writing. 
+          </p>
+          <p><img src="images/blueprint.png" alt="Course blueprint"></p>
+				</section>
+        
+
+        <section>
+					<h2>Feature: Learning Maps</h2>
+          <p class="lefty">
+             Learning maps are course design tools. They help authors 
+             visualize (1) the knowledge that students should learn, and (2) the
+             experiences that will help students learn that knowledge.
+          </p>
+          <p><img src="images/learning-map.png" alt="Learning map"></p>
+				</section>    
+        
+        
+        <section>
+					<h2>Feature: Pseudents</h2>
+          <p class="lefty">
+             Pseudents are pseudo students. They go through the course with
+             the real students. Authors can have pseudents make mistakes, 
+             ask questions, do tasks...
+          </p>
+          <p><img src="images/pseudents.png" alt="Pseudents"></p>
+				</section>          
+        
+        
+        <section>
+					<h2>Feature: SWIM</h2>
+          <p class="lefty">
+             The show-what-I-mean (SWIM) editor lets authors focus on content
+             rather than the details of formatting.
+          </p>
+          <p><img src="images/editing.png" alt="Editing"></p>
+				</section>          
+        
+        
+        <section>
+					<h2>Feature: Mobile</h2>
+          <p class="lefty">
+             CyberCourse formats content to match the display 
+             device. Authors can see previews on various 
+             devices, if they want.
+          </p>
+          <p><img src="images/mobile.png" alt="Mobile preview"></p>
+				</section>          
+        
+        
+        <section>
+					<h2>Feature: Page Order</h2>
+          <p class="lefty">
+             Authors can change page order with drag-and-drop tools.
+          </p>
+          <p><img src="images/reorder-pages.png" alt="Page order"></p>
+				</section>          
+        
+        
+        <section>
+					<h2>Feature: Revision Tracking</h2>
+          <p class="lefty">
+             CyberCourse tracks changes to each page. This is particularly
+             useful when authors work in teams. 
+          </p>
+          <p><img src="images/revision-tracking.png" alt="Revisions"></p>
+				</section>          
+        
+        
+        <section>
+					<h2>Feature: Workflow Tags</h2>
+          <p class="lefty">
+             Workflow tags help authors organize tasks. Authors
+             can make up their own tags, like "Check with Dave."
+          </p>
+          <p><img src="images/workflow.png" alt="Workflow tags"></p>
+				</section>
+        
+        
+        <section>
+					<h2>Feature: Feedback (prototype)</h2>
+          <p class="lefty">
+             The feedback system gives different graders the same standard
+             rubrics. It takes as little
+             as one minute to grade a simple exercise. 
+          </p>
+          <p><img src="images/feedback.png" alt="Feedback"></p>
+				</section>        
+        
+        
+        <section>
+					<h2>Feature: Much More!</h2>
+          <p class="lefty">
+             Comments, forums, user account control, permissions, 
+             themes (look-and-feel), branding, search, media handling,
+             keywords, content cloning, etc., etc.
+          </p>
+				</section>          
+        
+        
+        <section>
+					<h2>Research-Backed Technology</h2>
+          <p class="lefty">
+             CyberCourse supports the learning model described earlier.
+          </p>
+          <p class="lefty">
+            <span class="highlight">Authors</span> make courses, exercises, grading rubrics...
+          </p>
+          <p class="lefty">
+            <span class="highlight">Professors</span> are expert guides.
+          </p>
+          <p class="lefty">
+            <span class="highlight">Students</span> learn by reading content, and doing hands-on work.
+          </p>
+          <p class="lefty">
+            <span class="highlight">Graders</span> give students detailed feedback. 
+          </p>
+
+				</section>          
+        
+        
+        <section>
+					<h2>CyberCourse</h2>
+					<div class="lefty">
+            <p>Main site: <a href="http://cybercour.se" target="_blank">http://cybercour.se</a></p>
+            <p>Demo: <a href="http://demo.cybercour.se" target="_blank">http://demo.cybercour.se</a></p>
+            <p>Documentation: <a href="http://wiki.cybercour.se" target="_blank">http://wiki.cybercour.se</a></p>
+            <p>Contact: <a href="mailto:kieran@dolfinity.com">Kieran Mathieson</a>, 
+              <a href="mailto:kieran@dolfinity.com">kieran@dolfinity.com</a>
+            </p>
+          </div>
+				</section>        
+        
+        
+        
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
