@@ -24,91 +24,38 @@
 	</head>
 
 	<body>
-
-Users like WYSIWYG
-
-  The promise: what authors see on the editor screen is what readers see in the final display.
-
-But... 
-
-  True WYSIWYG is not feasible anymore.
-  
-  Today's presentational formatting might not work on future devices.
-  
-  Presentational markup might not work for all humans. (Color blind, etc.)
-
-Markup is good!
-
-  Markup gives intent. 
-  
-  Let the device format, for the current user.
-  
-Users and markup?
-
-  (screenshot of markdown editor with headers and images)
-  
-  (Arrow pointing to header tag. User: "I can do that.")
-  
-  (Arrow pointing to image tag with path. User: "WTF!")
-
-Users and markup?
-
-  Combine precision of markup with GUI ease of use.
-  
-Demo
-
-  Do tags and insert images. Show previews.
-  
-CKEditor
-
-
-
-Which markup language?
-
-  Easy for users
-  Language standard for custom tags
-  Stable, maintained s/w
-  Easy to implement custom tags
-
-reStructured text
-
-  From Python programming community.
-    Part of DocUtils package.
-  Many directives.
-  Canonical translator is stable.
-  Extend class to make a custom directive.
-  
-Drupal integration
-
-  Input format
-  CKEditor profile
-  Custom peek plugin (quick overview of rendering)
-
-PHP
-
-  (Code)
-  
-That's all folks!
-    
-    
 		<div class="reveal">
-
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
-          <h2>Show-What-I-Mean (SWIM)<br>vs<br>WYSIWYG</h2>
-          <h1 class="smackdown">Smackdown</h1>
-					<p>
-						<small>Kieran Mathieson, <a href="http://dolfinity.com">Dolfinity Learning</a></small>
-					</p>
+
+        <section>
+          <h1>Show-What-I-Mean (SWIM)</h1>
+          <h3>A content editor for mobile times</h3>
+          <p class="author">
+            Kieran Mathieson<br>
+            <span style="font-size:70%">Oakland University<br>
+              Dolfinity Learning, LLC</span>
+          </p>
 				</section>
 
 				<section>
-					<h2>Skill Courses in Higher Education</h2>
-					<div class="lefty">
-            <p>Writing, data analysis, programming...</p>
-            <p>Help students get the most bang per buck from skill courses.</p>
-            <p>Research on learning tells us how.</p>
+					<h2>Users like WYSIWYG</h2>
+					<div>
+            <ul>
+              <li>
+                The promise: what authors see on the editor screen is what 
+                readers see in the final display.
+              </li>
+              <li>
+                True WYSIWYG is not feasible anymore.
+              </li>
+              <li>
+                <p>Display depends on a 3-way interaction:</p>
+                <p class="center" style="margin-top: 1em;">Content x Device x User</p>
+              </li>
+            </ul>
+            <p></p>
+            <p></p>
           </div>
 
 <!--					<aside class="notes">
@@ -117,188 +64,159 @@ That's all folks!
 				</section>
         
 				<section>
-					<h2>Practices Backed by Research</h2>
-					<div class="lefty">
-            <ul>
-              <li>Outcome-based learning.
-                <p class="subpoint">
-                  Sharp focus on well-defined goals.
-                </p>
-              </li>
-              <li>Deep learning.
-                <p class="subpoint">
-                  Problem solving, not memorization.
-                </p>
-              </li>
-              <li>Frequent formative feedback.
-                <p class="subpoint">
-                  Students do tasks, not quizzes. They get feedback from  
-                  people, not computers. They get hints for improvements, 
-                  not just a grade.
-                </p>
-              </li>
-              <li>One-on-one help from knowledgeable people.
-                <p class="subpoint">
-                  Flipped classes. Teacher as guide, not lecturer.
-                </p>
-              </li>
-              <li>Metacognitive awareness.
-                <p class="subpoint">
-                  Overcome barriers to learning, e.g., "I don't have the math gene."
-                </p>
-              </li>
-              <li>Other things...</li>
-            </ul>
-          </div>
+          <h2>Formatting &#8658; Intent</h2>
+          <h3>(Sometimes)</h3>
+          <p class="center">
+            <img src="images/aside.png" alt="Aside">
+          </p>
+          <p class="center">Lose formatting, lose intent.</p>
 				</section>
 
 				<section>
-					<h2>But...</h2>
-					<p class="lefty">
-            Professors are chemists, mathematicians, economists... 
+					<h2>Semantic markup is good!</h2>
+          <p class="center">
+            <img src="images/aside.png" alt="Aside">
           </p>
-          <p class="lefty subpoint">
-            Not trained in learning research.
+          <p class="center">
+            <code>&lt;aside&gt;...&lt;/aside&gt;</code>
           </p>
-          <p class="lefty subpoint">
-            Fewer than 1 in 10 use learning research in class preparation.
-          </p>
-          <p class="lefty">
-            Hard to change.
-          </p>
-          <p class="lefty subpoint">
-            We would have to change faculty reward systems, hiring practices, 
-            graduate student training, workload allocation, administrative
-            priorities, funding models...
-          </p>
-          <p class="lefty">
-            Fuggedaboutit!
-          </p>
-          <p class="lefty subpoint">
-            This level of organizational change is very, <em>very</em>,
-            <strong><em>very</em></strong> difficult.
+          <p class="center">
+            Let the device render content for its user.
           </p>
 				</section>
 
-				<section>
-					<h2>Solution</h2>
-          <p class="lefty">
-            Rethink how skill courses are designed and run.
-          </p>
-					<p class="lefty">
-            Unbundle professors' jobs.
-          </p>
-          <p class="lefty subpoint">
-            Let professors just be content area experts. That's difficult
-            enough!
-          </p>
-					<p class="lefty">
-            Other people design skill courses. 
-          </p>
-          <p class="lefty subpoint">
-            Course authors are professors with side businesses, practicing 
-            professionals, ...
-          </p>
-          <p class="lefty subpoint">
-            They learn about learning.
-          </p>
-          <p class="lefty subpoint">
-            Use open source Web software to create courses.
-          </p>
-          <p class="lefty subpoint">
-            Charge $ to support their work.
-          </p>
-				</section>
-
-       
         <section>
-					<h2>The new skill course: Four Roles</h2>
-					<div class="lefty">
-            <p><span class="highlight">Authors</span> create online content, exercises, 
-              grading rubrics, ... </p>
-            <p><span class="highlight">Professors</span> choose courses, and customize them.</p>
-            <p><span class="highlight">Students</span> work through online material.</p>
-            <p class="lefty subpoint">
-              Many hands-on exercises. Write programs, analyze data...
-            </p>
-            <p class="lefty subpoint">
-              Stuck? Get personal help from professors/assistants.
-            </p>
-            <p><span class="highlight">Graders</span> evaluate student work.</p>
-            <p class="lefty subpoint">Give students not just a grade, but
-            a list of improvements.</p>
-            <p class="lefty subpoint">If allowed, students improve their work and 
-            resubmit.</p>
-          </div>
+					<h2>Users and markup</h2>
+          <p class="markup">
+            # The Larch  <span class="user">&nbsp;&nbsp;User: A heading, OK, I get that.</span><br>
+            <br>
+            The larch is the Cool Dude of trees. Here's a larch:<br>
+            <br>
+            ![The larch](/sites/default/files/trees/larch.jpg)<br>
+            <span class="user">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;User: WTF? What's all the slashy slashy?</span>
+          </p>
 				</section>
 
+        <section>
+					<h2>Users and markup</h2>
+          <div class="text-block">
+            <p class="center">Markup's precision of intent</p>
+            <p class="center">+</p>
+            <p class="center">GUI's ease of use</p>
+            <p class="center">=</p>
+            <p class="center">SWIM</p>
+          </div>
+          <h3>Demo</h3>
+				</section>
+        
         
         <section>
-					<h2>Authors</h2>
-					<div class="lefty">
+					<h2>CKEditor, not &lt;textarea&gt;</h2>
+					<div>
             <ul>
               <li>
-                Educational entrepreneurs.
-                <p class="subpoint">Run their own Web sites, or outsource.</p>
+                Show images, not paths to images.
               </li>
-              <li>Experts in writing, programming, statistics...
-                <p class="subpoint">Part-time instructors with Ph.D.s.</p>
-                <p class="subpoint">Professors earning summer money.</p>
-                <p class="subpoint">Professionals working for themselves.</p>
+              <li>
+                CK was not designed for this use case.
               </li>
-              <li>Give away or sell their work.
-                <p class="subpoint">Students buy course access, instead of textbooks.</p>
-                <p class="subpoint">Authors keep 75% - 100% of the revenue.</p>
-                <p class="subpoint">Set low prices, and still make money.</p>
-                <p class="subpoint">Can bundle grading services with courses.</p>
-              </li>
+              <ul>
+                <li>
+                  Hide most toolbar buttons.
+                </li>
+                <li>
+                  Turn off CK right-click. 
+                </li>
+                <li>
+                  Do not disable browser spell check.
+                </li>
+                <li>
+                  ...
+                </li>
+              </ul>
             </ul>
           </div>
-				</section>        
-
+					<aside class="notes">
+            <p>
+              Most tags in Markdown, Textile and other languages are easy 
+              for authors to work with.
+            </p>
+            <p>
+              Images are not.
+            </p>
+            <p>
+              It's crucial that authors can see the images they're working with.
+            </p>
+            
+					</aside>
+				</section>
         
         <section>
-					<h2>Professors</h2>
-					<div class="lefty">
+					<h2>Which markup language?</h2>
+					<div>
             <ul>
-              <li>Do research.</li>
-              <li>Keep up with their fields.</li>
-              <li>Work with students one-on-one, and in small groups. *</li>
-              <li>Encourage students. *</li>
-              <li>Give final grades.</li>
-            </ul>
-            <p class="subpoint" style="text-align: right;">* High touch</p>
-            <ul>
-              <li>Don't lecture.</li>
-              <li>Don't make courses from scratch.</li>
-              <li>Don't need to be experts in both their fields and 
-                  learning research.</li>
+              <li>
+                Language issues:
+              </li>
+              <ul>
+                <li>
+                  Easy for users.
+                </li>
+                <li>
+                  Has one clear standard.
+                </li>
+                <li>
+                  Has a standard for custom tags (important for my use case).
+                </li>
+              </ul>
+              <li>
+                Implementation issues:
+              </li>
+              <ul>
+                <li>
+                  Translation code: stable, maintained, and open source.
+                </li>
+                <li>
+                  Easy to implement custom tags.
+                </li>
+              </ul>
             </ul>
           </div>
 				</section>        
         
+        <section>
+					<h2>reStructuredText</h2>
+					<div>
+            <ul>
+              <li>From the Python programming community.</li>
+              <li>Part of DocUtils (open source).</li>
+              <li>The canonical translator is stable.</li>
+              <ul>
+                <li>Written in Python, not PHP.</li>
+              </ul>
+              <li>Extend a class to make a custom directive (tag).</li>
+              <ul>
+                <li>Many existing directives.</li>
+              </ul>
+            </ul>
+          </div>
+				</section>   
 
         <section>
-					<h2>Students</h2>
-					<div class="lefty">
+					<h2>Drupal integration</h2>
+					<div>
             <ul>
               <li>
-                Work online mostly. 
-                <p class="subpoint">Any place, any time.</p>
+                Input filter.
               </li>
               <li>
-                Read content, and do hands-on exercises.
-                <p class="subpoint">Get personal feedback from human graders.</p>
+                Text format.
               </li>
               <li>
-                Help from professors/tutors.
-                <p class="subpoint">Optional or required meetings.</p>
-                <p class="subpoint">Face-to-face, or online in real time.</p>
+                CKEditor profile.
               </li>
-              <li>Encouragement from professors/tutors/graders.
-                <p class="subpoint">
-                  Email: "You didn't do any exercises this week. Need help?"
-                </p>
+              <li>
+                CKEditor peek plugin.
               </li>
             </ul>
           </div>
@@ -306,177 +224,119 @@ That's all folks!
                 
         
         <section>
-					<h2>Graders</h2>
-					<div class="lefty">
+					<h2>Problem</h2>
+					<div>
             <ul>
-              <li>Give each student personal feedback for every exercise.</li>
-              <li>Use standardized rubrics created by authors.</li>
-              <li>Can be anywhere in the world.</li>
-              <li>Don't need to be experts. Just:
-                <p class="subpoint">Competent (enough).</p>
-                <p class="subpoint">Personable.</p>
-                <p class="subpoint">Good (enough) writers.</p>
+              <li>
+                I found it hard to set up custom ckeditor.config.js and 
+                CK plugin files so that:
               </li>
+              <ul>
+                <li>
+                  The files would not be lost 
+                  when CK, the CK module, and the theme are updated, and
+                </li>
+                <li>
+                  CK could be used for both SWIM and WYSIWYG.
+                </li>
+              </ul>
             </ul>
           </div>
 				</section>
         
         
         <section>
-					<h2>CyberCourse</h2>
-					<div class="lefty">
-            <p>Open source software for creating and running skill courses.</p>
-            <p>Supports learning science principles.</p>
-                <p class="subpoint">Improves student skills.</p>
-            <p>Supports a sustainable business model.</p>
-                <p class="subpoint">Authors get the revenue.</p>
-            <p>Professors don't need to learn about learning research.</p>
-                <p class="subpoint">Authors bake learning research goodness into courses.</p>
-            <p class="highlight">
-              Now for some screen shots...
+					<h2>PHP</h2>
+          <div>
+            <pre>
+function swim_process_filter($text,...) {
+  //Preprocessing.
+  $desc = array(
+      0 => array('pipe', 'r'), // stdin
+      1 => array('pipe', 'w'), // stdout
+  );
+  $py_path = DRUPAL_ROOT . '/' 
+      . drupal_get_path('module', 'swim') .'/python/convert_rest.py';
+  $command =  'python ' . $py_path;
+  $p = proc_open($command, $desc, $pipes);
+  fwrite($pipes[0], $text);
+  fclose($pipes[0]);
+  $html = stream_get_contents($pipes[1]);
+  fclose($pipes[1]);
+  proc_close($p);
+  return $html;
+}              
+            </pre>
+          </div>
+				</section>        
+        
+        <section>
+					<h2>Python (minimum)</h2>
+          <div>
+            <pre>
+#Read the content to translate.
+data_in = ''
+for line in sys.stdin:
+    data_in += line
+#Translate it.
+doc = core.publish_parts(data_in, writer_name='html')['html_body']
+#Return translated content to Drupal.
+print (doc)
+            </pre>
+          </div>
+				</section>        
+
+        <section>
+					<h2>Custom directive</h2>
+          <div>
+            <p><pre>
+#Create the chide directive
+class Chide(Directive):
+    def run(self):
+        if user.can_chide: //user has Drupal perm data.
+            target = ''.join(self.content.data)
+            text = '&lt;div&gt;Tut, tut! ' + target + '&lt;/div&gt;'
+        else:
+            text = '&lt;p&gt;You are not allowed to chide.&lt;/p&gt;'
+        return [nodes.raw('', text, format='html')]
+
+#Register the new directive.
+directives.register_directive('chide', Chide)
+            </pre></p>
+            <p>
+              This returns HTML, but it could return a renderable array instead.<br>
+              <small>(probably)</small>
             </p>
           </div>
 				</section>        
         
-
         <section>
-					<h2>Feature: Course Design Blueprints</h2>
-          <p class="lefty">
-            CyberCourse blueprints help authors design good courses, before they start
-            writing. 
-          </p>
-          <p><img src="images/blueprint.png" alt="Course blueprint"></p>
+					<h2>Performance</h2>
+          <div>
+            <ul>
+              <li>
+                I haven't investigated this fully, but at the moment I 
+                don't think it's a deal breaker.
+              </li>
+              <li>
+                .pyc - byte-compiled.
+              </li>
+              <li>
+                PyPy, stacklessness, tasklets, continulets, genlets, greenlets and microthreads.
+              </li>
+            </ul>
+          </div>
 				</section>
         
-
         <section>
-					<h2>Feature: Learning Maps</h2>
-          <p class="lefty">
-             Learning maps are course design tools. They help authors 
-             visualize (1) the knowledge that students should learn, and (2) the
-             experiences that will help students learn that knowledge.
+					<h2>That's all, folks!</h2>
+          <p class="center">
+            <a href="http://demo.cybercour.se" target="_blank">http://demo.cybercour.se</a>
           </p>
-          <p><img src="images/learning-map.png" alt="Learning map"></p>
+          <p class="center">kieran@dolfinity.com</p>
+          <p class="center">mathieso on D.O</p>
 				</section>    
-        
-        
-        <section>
-					<h2>Feature: Pseudents</h2>
-          <p class="lefty">
-             Pseudents are pseudo students. They go through the course with
-             the real students. Authors can have pseudents make mistakes, 
-             ask questions, do tasks...
-          </p>
-          <p><img src="images/pseudents.png" alt="Pseudents"></p>
-				</section>          
-        
-        
-        <section>
-					<h2>Feature: SWIM</h2>
-          <p class="lefty">
-             The show-what-I-mean (SWIM) editor lets authors focus on content
-             rather than the details of formatting.
-          </p>
-          <p><img src="images/editing.png" alt="Editing"></p>
-				</section>          
-        
-        
-        <section>
-					<h2>Feature: Mobile</h2>
-          <p class="lefty">
-             CyberCourse formats content to match the display 
-             device. Authors can see previews on various 
-             devices, if they want.
-          </p>
-          <p><img src="images/mobile.png" alt="Mobile preview"></p>
-				</section>          
-        
-        
-        <section>
-					<h2>Feature: Page Order</h2>
-          <p class="lefty">
-             Authors can change page order with drag-and-drop tools.
-          </p>
-          <p><img src="images/reorder-pages.png" alt="Page order"></p>
-				</section>          
-        
-        
-        <section>
-					<h2>Feature: Revision Tracking</h2>
-          <p class="lefty">
-             CyberCourse tracks changes to each page. This is particularly
-             useful when authors work in teams. 
-          </p>
-          <p><img src="images/revision-tracking.png" alt="Revisions"></p>
-				</section>          
-        
-        
-        <section>
-					<h2>Feature: Workflow Tags</h2>
-          <p class="lefty">
-             Workflow tags help authors organize tasks. Authors
-             can make up their own tags, like "Check with Dave."
-          </p>
-          <p><img src="images/workflow.png" alt="Workflow tags"></p>
-				</section>
-        
-        
-        <section>
-					<h2>Feature: Feedback (prototype)</h2>
-          <p class="lefty">
-             The feedback system gives different graders the same standard
-             rubrics. It takes as little
-             as one minute to grade a simple exercise. 
-          </p>
-          <p><img src="images/feedback.png" alt="Feedback"></p>
-				</section>        
-        
-        
-        <section>
-					<h2>Feature: Much More!</h2>
-          <p class="lefty">
-             Comments, forums, user account control, permissions, 
-             themes (look-and-feel), branding, search, media handling,
-             keywords, content cloning, etc., etc.
-          </p>
-				</section>          
-        
-        
-        <section>
-					<h2>Research-Backed Technology</h2>
-          <p class="lefty">
-             CyberCourse supports the learning model described earlier.
-          </p>
-          <p class="lefty">
-            <span class="highlight">Authors</span> make courses, exercises, grading rubrics...
-          </p>
-          <p class="lefty">
-            <span class="highlight">Professors</span> are expert guides.
-          </p>
-          <p class="lefty">
-            <span class="highlight">Students</span> learn by reading content, and doing hands-on work.
-          </p>
-          <p class="lefty">
-            <span class="highlight">Graders</span> give students detailed feedback. 
-          </p>
 
-				</section>          
-        
-        
-        <section>
-					<h2>CyberCourse</h2>
-					<div class="lefty">
-            <p>Main site: <a href="http://cybercour.se" target="_blank">http://cybercour.se</a></p>
-            <p>Demo: <a href="http://demo.cybercour.se" target="_blank">http://demo.cybercour.se</a></p>
-            <p>Documentation: <a href="http://wiki.cybercour.se" target="_blank">http://wiki.cybercour.se</a></p>
-            <p>Contact: <a href="mailto:kieran@dolfinity.com">Kieran Mathieson</a>, 
-              <a href="mailto:kieran@dolfinity.com">kieran@dolfinity.com</a>
-            </p>
-          </div>
-				</section>        
-        
-        
-        
 			</div>
 
 		</div>

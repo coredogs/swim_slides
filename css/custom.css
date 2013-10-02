@@ -1,3 +1,37 @@
 .reveal h1.smackdown {
   color: PaleGoldenRod ;
 }
+
+.reveal section div,
+.reveal section p {
+  text-align: left;
+}
+
+.reveal section div.center,
+.reveal section p.center {
+  text-align: center;
+}
+
+
+.reveal section ul li {
+  margin-bottom: 1em;
+}
+
+.reveal section .markup {
+  font-family: monospace;
+  font-size: 90%;
+}
+
+.reveal section .markup .user {
+  font-family: cursive;
+  color: #ffff99;
+}
+
+.reveal .text-block {
+  margin-bottom: 2em;
+}
+
+.reveal .author {
+  text-align: center;
+  margin-top: 1em;
+}
