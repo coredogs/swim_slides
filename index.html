@@ -203,6 +203,37 @@
 				</section>   
 
         <section>
+					<h2>ReST sample</h2>
+					<div>
+            <pre>
+This is a demo site for CyberCourse, a system for designing, creating, and running 
+courses. CyCo was designed for university skill courses, but is useful in 
+other contexts as well.
+
+.. sidebar:: Open source
+
+   CyCo is open source. You can use it for free!
+
+   Free is good.
+
+What's it all about?
+====================
+
+CyberCourse uses methods from learning research. Such as:
+
+* Deep learning. Fewer facts. More skills.
+* Outcome-based learning. Concentrate just on core skills.
+* Frequent formative feedback. Many exercises, making things. Good feedback.
+* Interaction with experts. Give students personal help, when and where they need it.
+* Nudging. If a student falls behind, contact her, before it's impossible to catch up.
+
+CyberCourse is *not* a learning management system, like `Moodle <http://moodle.org>`_.              
+            </pre>
+          </div>
+				</section>   
+
+
+        <section>
 					<h2>Drupal integration</h2>
 					<div>
             <ul>
@@ -224,17 +255,17 @@
                 
         
         <section>
-					<h2>Problem</h2>
+					<h2>Problems</h2>
 					<div>
             <ul>
               <li>
-                I found it hard to set up custom ckeditor.config.js and 
+                Setting up custom ckeditor.config.js and 
                 CK plugin files so that:
               </li>
               <ul>
                 <li>
                   The files would not be lost 
-                  when CK, the CK module, and the theme are updated, and
+                  when CK, the CK module, and the theme are updated, <em>and</em>
                 </li>
                 <li>
                   CK could be used for both SWIM and WYSIWYG.
@@ -303,9 +334,16 @@ class Chide(Directive):
 #Register the new directive.
 directives.register_directive('chide', Chide)
             </pre></p>
+            <p>Calling it:
+              <pre>
+.. chide::
+
+    You follow the *Spartans*?
+                  
+    OK. I'll speak slowly.
+              </pre></p>
             <p>
-              This returns HTML, but it could return a renderable array instead.<br>
-              <small>(probably)</small>
+              
             </p>
           </div>
 				</section>        
